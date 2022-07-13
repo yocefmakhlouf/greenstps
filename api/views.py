@@ -166,7 +166,6 @@ class send(APIView):
                     last_users.create(User.objects.get(username=request.data["username"]))
             return Response(dts,status=200)
         except Exception as e:
-<<<<<<< HEAD
             try:
                 if request.data["message"]:
                     d=Data.objects.get(user=Access_token.objects.get(token = t).r_token.user)
@@ -200,8 +199,6 @@ class GetmDatau(APIView):
             f.close()
             return Response(dts,status=200)
         except Exception as e:
-=======
->>>>>>> 4d63a78785b2ef93179cbb0adf76c0019b65d65a
             print(e)
             return Response({"Error":"Error while processing demand"},status=422)
 class GetmData(APIView):
@@ -227,7 +224,6 @@ class GetmData(APIView):
         except Exception as e:
             print(e)
             return Response({"Error":"Error while processing demand"},status=422)
-<<<<<<< HEAD
 class GetInfo(APIView):
     fields=["categ","school","taille","poids","total_steps"]
     def get(self,request):
@@ -245,10 +241,6 @@ class GetInfo(APIView):
             return Response({"Error":"Error while processing demand"},status=422)
 class GetuData(APIView):
     fields=["categ","school","taille","poids","total_steps","age"]
-=======
-class GetuData(APIView):
-    fields=["categ","school","taille","poids","total_steps"]
->>>>>>> 4d63a78785b2ef93179cbb0adf76c0019b65d65a
     def post(self,request):
         t= str(request.headers["Authorization"])
         try : 
@@ -301,7 +293,6 @@ class GetData(APIView):
                     f.close()
             return Response(datas,status=200)
         except Exception as e:
-<<<<<<< HEAD
             try:
                 datas={"steps":{},"distance":{},"calories":{}}
                 d=Data.objects.get(user=Access_token.objects.get(token = t).r_token.user)
@@ -333,10 +324,6 @@ class GetData(APIView):
             except:
                 print(e)
                 return Response({"Error":"Error while processing demand"},status=422)
-=======
-            print(e)
-            return Response({"Error":"Error while processing demand"},status=422)
->>>>>>> 4d63a78785b2ef93179cbb0adf76c0019b65d65a
 class register(APIView):
     def post(self,request):
         t= str(request.headers["Authorization"])

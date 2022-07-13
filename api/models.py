@@ -49,10 +49,7 @@ class Data(models.Model):
     poids = models.IntegerField(default=0)
     today_steps = models.IntegerField(default=0)
     total_steps = models.IntegerField(default=0)
-<<<<<<< HEAD
     age = models.IntegerField(default=0)
-=======
->>>>>>> 4d63a78785b2ef93179cbb0adf76c0019b65d65a
     categ = models.CharField(max_length=50)
     school = models.CharField(max_length=50,default='um6p')
     chat_path = models.CharField(max_length=200,blank=True,default="")
@@ -73,10 +70,7 @@ class Data(models.Model):
                 "poids":int(r.data["poids"]),
                 "today_steps":0,
                 "total_steps" :0,
-<<<<<<< HEAD
                 "age":int(r.data["age"]),
-=======
->>>>>>> 4d63a78785b2ef93179cbb0adf76c0019b65d65a
                 "school" :r.data["school"],
                 "categ": r.data['categ'],
                 }
