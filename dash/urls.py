@@ -20,7 +20,6 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 from api.views import LDAPLogin,register,gets_steps,GetUsers,GetData,GetuData,GetmData,send,setevent,getevent,geteventdata,connect,logout,getuserchat,GetmDatau,GetInfo
-from api.views import LDAPLogin,register,gets_steps,GetUsers,GetData,GetuData,GetmData,send,setevent,getevent,geteventdata,connect,logout,getuserchat
 
 urlpatterns = [
     path('admin/', admin.site.urls),
