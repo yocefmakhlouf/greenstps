@@ -20,7 +20,11 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+<<<<<<< HEAD
 from api.views import LDAPLogin,register,gets_steps,GetUsers,GetData,GetuData,GetmData,send,setevent,getevent,geteventdata,connect,logout,getuserchat,GetmDatau,GetInfo
+=======
+from api.views import LDAPLogin,register,gets_steps,GetUsers,GetData,GetuData,GetmData,send,setevent,getevent,geteventdata,connect,logout,getuserchat
+>>>>>>> 4d63a78785b2ef93179cbb0adf76c0019b65d65a
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -38,7 +42,10 @@ urlpatterns = [
     path('api/connect/',connect.as_view()),
     path('api/logout/',logout.as_view()),
     path('api/chats/',getuserchat.as_view()),
+<<<<<<< HEAD
     path('api/user/getmdata/',GetmDatau.as_view()),
     path('api/user/getinfo/',GetInfo.as_view()),
+=======
+>>>>>>> 4d63a78785b2ef93179cbb0adf76c0019b65d65a
 
 ]
